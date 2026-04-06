@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External library: jQuery CDN (used for site interactions in scripts.js) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../static/scripts.js" defer></script>
     <link rel="stylesheet" href="../static/style.css" />
     <meta name="author" content="Justin Tan" />
@@ -10,12 +12,13 @@
       content="Museum, Carnegie Mellon University, Information Systems"
     />
     <meta name="description" content="MonoMuse website redesign project" />
-    <title>Exhibitions</title>
+    <title>Order Confirmation</title>
   </head>
   <body
     onload="
       addYear();
       ActiveNav();
+      renderConfirmation();
     "
   >
     <div class="container">
@@ -48,53 +51,22 @@
 
       <main class="main">
         <div class="card">
-          <h2>Exhibition 1: Digital Dreams</h2>
-          <span class="badge badge-now">Now Showing</span>
-          <p>
-            This exhibition explores how artists use algorithms, artificial
-            intelligence, and generative tools to create new forms of digital
-            expression.
+          <h1>Order Confirmation</h1>
+          <p id="confirmMessage">
+            Your order has been placed. This is a simulated checkout.
           </p>
-        </div>
-
-        <div class="card">
-          <h2>Exhibition 2: Code and Canvas</h2>
-          <span class="badge badge-permanent">Permanent Collection</span>
-          <p>
-            Code and Canvas highlights programming as an artistic medium through
-            installations, projections, and interactive pieces.
+          <p id="confirmDetails"></p>
+          <p class="checkout-total">
+            Final total: <strong id="confirmTotal">$0.00</strong>
           </p>
-        </div>
-
-        <div class="card">
-          <h2>Museum Spotlight Video</h2>
-          <p>
-            Explore museum education and curation through this featured video.
-          </p>
-          <div class="video_frame">
-            <iframe
-              src="https://www.youtube.com/embed/kxPCFljwJws"
-              title="Museum Spotlight"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <p><a href="checkout.html">Place Another Order</a></p>
         </div>
       </main>
 
       <figure class="main_figure">
         <img
-          src="https://images.unsplash.com/photo-1767294274414-5e1e6c3974e9?fit=max&w=1080&q=80"
-          alt="Contemporary art gallery"
+          src="https://images.unsplash.com/photo-1567970009487-fe7b48f2d8a6?fit=max&w=1080&q=80"
+          alt="Visitor receiving museum ticket at front desk"
         />
       </figure>
 
@@ -106,12 +78,6 @@
         <p>
           Image source:
           <a href="https://unsplash.com">Unsplash</a>
-        </p>
-        <p>
-          Video source:
-          <a href="https://www.youtube.com/watch?v=kxPCFljwJws"
-            >YouTube - Museum Spotlight</a
-          >
         </p>
         <p class="footer-tagline">Where Art Meets Technology</p>
       </footer>

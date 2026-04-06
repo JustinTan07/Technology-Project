@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <!-- External library: jQuery CDN (used for read-more interaction in scripts.js) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="static/scripts.js" defer></script>
     <link rel="stylesheet" href="static/style.css" />
@@ -17,6 +18,7 @@
     onload="
       addYear();
       ActiveNav();
+      initGallery();
     "
   >
     <div class="container">
@@ -75,6 +77,67 @@
             engage visitors of all ages.
           </p>
         </div>
+
+        <div class="card">
+          <h2>Plan Your Visit</h2>
+          <table>
+            <tr>
+              <th>Visitor Information</th>
+              <th>Details</th>
+            </tr>
+            <tr>
+              <td>Hours</td>
+              <td>Daily, 10:00 AM - 6:00 PM</td>
+            </tr>
+            <tr>
+              <td>Pricing</td>
+              <td>
+                All ticket types are $18 each for this project checkout flow
+              </td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>5000 Forbes Ave, Pittsburgh, PA</td>
+            </tr>
+            <tr>
+              <td>Contact</td>
+              <td>Email: hello@monomuse.org | Phone: (412) 555-0176</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card" aria-label="Interactive gallery slideshow">
+          <h2>Featured Gallery</h2>
+          <div class="slideshow" id="galleryShow">
+            <img
+              class="slide active-slide"
+              src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?fit=max&w=1080&q=80"
+              alt="Visitors viewing digital projection artwork"
+            />
+            <img
+              class="slide"
+              src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?fit=max&w=1080&q=80"
+              alt="Museum visitor using interactive display"
+            />
+            <img
+              class="slide"
+              src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?fit=max&w=1080&q=80"
+              alt="Contemporary gallery hall with modern installations"
+            />
+          </div>
+          <div class="slideshow-controls">
+            <button
+              type="button"
+              id="prevSlide"
+              aria-label="Show previous image"
+            >
+              Previous
+            </button>
+            <button type="button" id="nextSlide" aria-label="Show next image">
+              Next
+            </button>
+          </div>
+        </div>
       </main>
 
       <figure class="main_figure">
@@ -88,6 +151,10 @@
         <p>
           Copyright &copy; <span id="copyYear"></span> MonoMuse Museum. All
           rights reserved.
+        </p>
+        <p>
+          Image source:
+          <a href="https://unsplash.com">Unsplash</a>
         </p>
         <p class="footer-tagline">Where Art Meets Technology</p>
       </footer>

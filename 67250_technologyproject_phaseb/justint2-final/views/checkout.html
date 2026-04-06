@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External library: jQuery CDN (used for site interactions in scripts.js) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../static/scripts.js" defer></script>
     <link rel="stylesheet" href="../static/style.css" />
     <meta name="author" content="Justin Tan" />
@@ -16,6 +18,7 @@
     onload="
       addYear();
       ActiveNav();
+      initCheckoutPage();
     "
   >
     <div class="container">
@@ -49,11 +52,66 @@
       <main class="main">
         <div class="card">
           <h1>Checkout</h1>
-          <p>
-            For this increment, primary purchase interaction is handled on the
-            Buy Tickets page.
-          </p>
-          <p><a href="buytickets.html">Open Buy Tickets</a></p>
+          <p>Complete your ticket details below to place a simulated order.</p>
+
+          <form id="checkoutForm" novalidate>
+            <label for="visitDate">Visit date (required)</label>
+            <input id="visitDate" name="visitDate" type="date" required />
+            <p class="error-msg" id="visitDateError" aria-live="polite"></p>
+
+            <label for="ticketType">Ticket type (required)</label>
+            <select id="ticketType" name="ticketType" required>
+              <option value="">Select ticket type</option>
+              <option value="general">General</option>
+              <option value="student">Student</option>
+              <option value="member">Member</option>
+            </select>
+            <p class="error-msg" id="ticketTypeError" aria-live="polite"></p>
+
+            <label for="ticketQuantity">Ticket quantity (1-10, required)</label>
+            <input
+              id="ticketQuantity"
+              name="ticketQuantity"
+              type="number"
+              min="1"
+              max="10"
+              step="1"
+              required
+            />
+            <p
+              class="error-msg"
+              id="ticketQuantityError"
+              aria-live="polite"
+            ></p>
+
+            <label for="email">Email (required)</label>
+            <input id="email" name="email" type="email" required />
+            <p class="error-msg" id="emailError" aria-live="polite"></p>
+
+            <label for="zipCode"
+              >Zip code (optional, 5 digits if entered)</label
+            >
+            <input
+              id="zipCode"
+              name="zipCode"
+              type="text"
+              inputmode="numeric"
+            />
+            <p class="error-msg" id="zipCodeError" aria-live="polite"></p>
+
+            <label class="checkbox-row" for="mailingList">
+              <input id="mailingList" name="mailingList" type="checkbox" />
+              Join our mailing list
+            </label>
+
+            <p class="checkout-total">
+              Total: <strong id="checkoutTotal">$0.00</strong>
+            </p>
+
+            <button type="submit">Place Order</button>
+          </form>
+
+          <p><a href="buytickets.html">Back to Buy Tickets</a></p>
         </div>
       </main>
 
