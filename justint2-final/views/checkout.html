@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../static/scripts.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css" />
+    <meta name="author" content="Justin Tan" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <title>Checkout</title>
+  </head>
+  <body
+    onload="
+      addYear();
+      ActiveNav();
+    "
+  >
+    <div class="container">
+      <header class="header">
+        <div class="brand">
+          <img
+            id="logo"
+            src="../static/monomuselogo.png"
+            alt="MonoMuse Museum Logo"
+          />
+          <span class="header-wordmark">MonoMuse</span>
+        </div>
+
+        <nav class="nav_bar" id="mainNav">
+          <a href="../index.html">Home</a>
+          <a href="explore.html">Explore</a>
+          <a href="exhibitions.html">Exhibitions</a>
+          <a href="buytickets.html">Buy Tickets</a>
+          <a href="checkout.html">Checkout</a>
+          <button
+            class="nav_toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            onclick="toggleNav('mainNav')"
+          >
+            &#9776;
+          </button>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="card">
+          <h1>Checkout</h1>
+          <p>
+            For this increment, primary purchase interaction is handled on the
+            Buy Tickets page.
+          </p>
+          <p><a href="buytickets.html">Open Buy Tickets</a></p>
+        </div>
+      </main>
+
+      <figure class="main_figure">
+        <img src="../static/monomuselogo.png" alt="Checkout MonoMuse" />
+      </figure>
+
+      <footer class="footer">
+        <p>
+          Copyright &copy; <span id="copyYear"></span> MonoMuse Museum. All
+          rights reserved.
+        </p>
+        <p class="footer-tagline">Where Art Meets Technology</p>
+      </footer>
+    </div>
+  </body>
+</html>

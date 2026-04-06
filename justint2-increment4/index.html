@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="static/scripts.js" defer></script>
+    <link rel="stylesheet" href="static/style.css" />
+    <meta name="author" content="Justin Tan" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <title>MonoMuse</title>
+  </head>
+  <body
+    onload="
+      addYear();
+      ActiveNav();
+    "
+  >
+    <div class="container">
+      <header class="header">
+        <img
+          id="logo"
+          src="static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+        />
+      </header>
+
+      <nav class="nav_bar">
+        <a href="index.html">Home</a>
+        <a href="views/explore.html">Explore</a>
+        <a href="views/exhibitions.html">Exhibitions</a>
+        <a href="views/buytickets.html">Buy Tickets</a>
+        <a href="views/checkout.html">Checkout</a>
+      </nav>
+
+      <main class="main">
+        <h2 id="greeting">Welcome To Monomuse</h2>
+        <p id="shortIntro">
+          MonoMuse explores where art and technology meet through interactive
+          galleries and creative installations.
+        </p>
+        <p id="longIntro">
+          We feature evolving exhibitions, creative coding experiences, and
+          artist collaborations that highlight how digital tools shape visual
+          storytelling and modern culture. Plan your visit and discover how
+          innovation can transform the museum experience.
+        </p>
+        <button id="readMore" type="button">Read More</button>
+        <button id="readLess" type="button">Read Less</button>
+        <p>
+          <a href="views/buytickets.html">Buy Tickets</a>
+        </p>
+      </main>
+
+      <figure class="main_figure">
+        <img
+          class="figure_logo"
+          src="static/monomuselogo.png"
+          alt="MonoMuse Symbol"
+        />
+      </figure>
+
+      <footer class="footer">
+        Copyright is not allowed
+        <p id="copyYear"></p>
+      </footer>
+    </div>
+  </body>
+</html>

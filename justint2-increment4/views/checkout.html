@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../static/scripts.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css" />
+    <meta name="author" content="Justin Tan" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <title>Checkout</title>
+  </head>
+  <body
+    onload="
+      addYear();
+      ActiveNav();
+    "
+  >
+    <div class="container">
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+        />
+      </header>
+
+      <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+      </nav>
+
+      <main class="main">
+        <h1>Checkout</h1>
+        <p>
+          For this increment, primary purchase interaction is handled on the Buy
+          Tickets page.
+        </p>
+        <p><a href="buytickets.html">Open Buy Tickets</a></p>
+      </main>
+
+      <figure class="main_figure">
+        <img
+          class="figure_logo"
+          src="../static/monomuselogo.png"
+          alt="Checkout MonoMuse"
+        />
+      </figure>
+
+      <footer class="footer">
+        Copyright is not allowed
+        <p id="copyYear"></p>
+      </footer>
+    </div>
+  </body>
+</html>
