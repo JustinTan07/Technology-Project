@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="static/scripts.js" defer></script>
+    <link rel="stylesheet" href="static/style.css" />
+    <meta name="author" content="Justin Tan" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonoMuse</title>
+  </head>
+  <body
+    onload="
+      addYear();
+      ActiveNav();
+    "
+  >
+    <div class="container">
+      <header class="header">
+        <div class="brand">
+          <img
+            id="logo"
+            src="static/monomuselogo.png"
+            alt="MonoMuse Museum Logo"
+          />
+          <span class="header-wordmark">MonoMuse</span>
+        </div>
+
+        <nav class="nav_bar" id="mainNav">
+          <a href="index.html">Home</a>
+          <a href="views/explore.html">Explore</a>
+          <a href="views/exhibitions.html">Exhibitions</a>
+          <a href="views/buytickets.html">Buy Tickets</a>
+          <a href="views/checkout.html">Checkout</a>
+          <button
+            class="nav_toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            onclick="toggleNav('mainNav')"
+          >
+            &#9776;
+          </button>
+        </nav>
+      </header>
+
+      <main class="main">
+        <div class="card">
+          <h2 id="greeting">Welcome To Monomuse</h2>
+          <p id="shortIntro">
+            MonoMuse explores where art and technology meet through interactive
+            galleries and creative installations.
+          </p>
+          <p id="longIntro">
+            We feature evolving exhibitions, creative coding experiences, and
+            artist collaborations that highlight how digital tools shape visual
+            storytelling and modern culture. Plan your visit and discover how
+            innovation can transform the museum experience.
+          </p>
+          <button id="readMore" type="button">Read More</button>
+          <button id="readLess" type="button">Read Less</button>
+          <p>
+            <a href="views/buytickets.html">Buy Tickets</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Experience Innovation</h2>
+          <p>
+            Open daily from 10 AM to 6 PM, MonoMuse features rotating
+            exhibitions, permanent collections, and interactive experiences that
+            engage visitors of all ages.
+          </p>
+        </div>
+      </main>
+
+      <figure class="main_figure">
+        <img
+          src="https://images.unsplash.com/photo-1645986321095-e2b0cc845c9b?fit=max&w=1080&q=80"
+          alt="Modern museum interior"
+        />
+      </figure>
+
+      <footer class="footer">
+        <p>
+          Copyright &copy; <span id="copyYear"></span> MonoMuse Museum. All
+          rights reserved.
+        </p>
+        <p class="footer-tagline">Where Art Meets Technology</p>
+      </footer>
+    </div>
+  </body>
+</html>

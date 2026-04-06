@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../static/scripts.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css" />
+    <meta name="author" content="Justin Tan" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <title>Exhibitions</title>
+  </head>
+  <body
+    onload="
+      addYear();
+      ActiveNav();
+    "
+  >
+    <div class="container">
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+        />
+      </header>
+
+      <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+      </nav>
+
+      <main class="main">
+        <h2>Exhibition 1: Digital Dreams</h2>
+        <p>
+          This exhibition explores how artists use algorithms, artificial
+          intelligence, and generative tools to create new forms of digital
+          expression.
+        </p>
+        <h2>Exhibition 2: Code and Canvas</h2>
+        <p>
+          Code and Canvas highlights programming as an artistic medium through
+          installations, projections, and interactive pieces.
+        </p>
+      </main>
+
+      <figure class="main_figure">
+        <img
+          class="figure_logo"
+          src="../static/monomuselogo.png"
+          alt="Exhibitions MonoMuse"
+        />
+      </figure>
+
+      <footer class="footer">
+        Copyright is not allowed
+        <p id="copyYear"></p>
+      </footer>
+    </div>
+  </body>
+</html>
